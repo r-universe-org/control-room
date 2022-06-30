@@ -1,0 +1,25 @@
+on:
+  schedule:
+    - cron:  '30 0 * * *'
+  workflow_dispatch:
+    inputs:
+      username:
+        description: 'GitHub username to enable'
+        required: false
+  repository_dispatch:
+    types: [created]
+
+name: Setup and delete universes
+
+jobs:
+  update:
+    name: Check for new app installations
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check for new app installations
+        uses: r-universe-org/setup-universes@master
+        env:
+          GH_APP_KEY: ${{ secrets.GH_APP_KEY }}
+          GITHUB_PAT: ${{ secrets.GHPAT }}
+          CRANLIKEPWD: ${{ secrets.CRANLIKEPWD }}
+          username: ${{ github.event.inputs.username }}

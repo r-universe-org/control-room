@@ -1,0 +1,28 @@
+on:
+  schedule:
+    - cron:  '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Which action to perform
+        required: true
+        default: quick
+      force:
+        description: Also refresh up-to-date mirrors
+        required: false
+
+name: Mirroring R-forge
+
+jobs:
+  update:
+    name: Mirror R-forge
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Find and update R-forge repos
+        uses: r-universe-org/rforge-mirror@master
+        with:
+          action: ${{ github.event.inputs.action }}
+          force: ${{ github.event.inputs.force }}
+
+        env:
+          GITHUB_PAT: ${{ secrets.RFORGE_PAT }}
