@@ -16,7 +16,7 @@ Hourly cronjob which checks for all monorepos in [r-universe](https://github.com
 
 Action source: https://github.com/r-universe-org/rebuilds
 
-Nightly cron which triggers __retry failures__ for recently failed build jobs, and monthly __full rebuilds__ for all existing packages on r-universe.
+Nightly cron which triggers __retry failures__ for recently failed build jobs, and a __full rebuild__ for packages on r-universe that are 30 days old (so it rebuilds about 3% of packages each night).
 
 
 ## Setup universes
@@ -27,6 +27,14 @@ Action source: https://github.com/r-universe-org/setup-universes
 
 On demand + nightly job which created and deletes [r-universe monorepos](https://github.com/r-universe) based [changes on CRAN](https://github.com/r-universe-org/cran-to-git) and new (un)installations of the [github app](https://github.com/apps/r-universe).
 
+
+## CRAN-to-git scraper
+
+[![cran-to-git badge](https://github.com/r-universe-org/control-room/actions/workflows/cranscraper.yml/badge.svg)](https://github.com/r-universe-org/control-room/actions/workflows/cranscraper.yml)
+
+Action source: https://github.com/r-universe-org/cranscraper
+
+Nightly cron to update the automatically generated registry files in [cran-to-git](http://github.com/r-universe-org/cran-to-git). This scrapes all CRAN packages looking for a Git URLs in the package descriptions, and then saves json files grouped by owner.
 
 ## R-forge mirror
 

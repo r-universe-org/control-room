@@ -1,0 +1,21 @@
+on:
+  schedule:
+    - cron:  '0 0 * * *'
+  workflow_dispatch:
+
+name: Scrape and update cran-to-git
+
+jobs:
+  update:
+    name: Scrape CRAN packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          repository: r-universe-org/cran-to-git
+      - name: Scrape CRAN descriptions
+        uses: r-universe-org/cranscraper@master
+        env:
+          GITHUB_PAT: ${{ secrets.GHPAT }}
