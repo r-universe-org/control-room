@@ -1,13 +1,13 @@
 on:
   schedule:
-    - cron:  '0 3 * * *'
+    - cron:  '0 2 * * *'
   workflow_dispatch:
 
-name: Update cran-to-git packages
+name: Update cran-to-git maintainers
 
 jobs:
   update:
-    name: Scrape CRAN packages
+    name: Update maintainers.csv
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -16,10 +16,11 @@ jobs:
         with:
           fetch-depth: 0
           repository: r-universe-org/cran-to-git
-      - name: Scrape CRAN descriptions
+      - name: Update maintainer csv
         uses: r-universe-org/cranscraper@master
         env:
           GITHUB_PAT: ${{ secrets.GHPAT }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_APP_ID: ${{ secrets.CRANTOGIT_APP_ID }}
+          GH_APP_KEY: ${{ secrets.CRANTOGIT_APP_KEY }}
         with:
-          update: 'crantogit'
+          update: 'maintainers'

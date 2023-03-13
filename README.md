@@ -31,6 +31,8 @@ On demand + nightly job which created and deletes [r-universe monorepos](https:/
 ## CRAN-to-git scraper
 
 [![cran-to-git badge](https://github.com/r-universe-org/control-room/actions/workflows/cranscraper.yml/badge.svg)](https://github.com/r-universe-org/control-room/actions/workflows/cranscraper.yml)
+[![maintainers badge](https://github.com/r-universe-org/control-room/actions/workflows/maintainers.yml/badge.svg)](https://github.com/r-universe-org/control-room/actions/workflows/maintainers.yml)
+
 
 Action source: https://github.com/r-universe-org/cranscraper
 
