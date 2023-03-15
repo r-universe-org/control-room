@@ -11,6 +11,10 @@ on:
 
 name: Setup and delete universes
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   update:
     name: Check for new app installations
