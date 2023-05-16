@@ -3,8 +3,8 @@ on:
     - cron:  '30 0 * * *'
   workflow_dispatch:
     inputs:
-      username:
-        description: 'GitHub username to enable'
+      FORCE_DELETE:
+        description: 'Ignore safety limits on deleting repos'
         required: false
   repository_dispatch:
     types: [created]
@@ -26,4 +26,4 @@ jobs:
           GH_APP_KEY: ${{ secrets.GH_APP_KEY }}
           GITHUB_PAT: ${{ secrets.GHPAT }}
           CRANLIKEPWD: ${{ secrets.CRANLIKEPWD }}
-          username: ${{ github.event.inputs.username }}
+          FORCE_DELETE: ${{ github.event.inputs.FORCE_DELETE }}
