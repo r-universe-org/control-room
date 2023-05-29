@@ -14,3 +14,4 @@ jobs:
         uses: r-universe-org/rebuilds@master
         env:
           GITHUB_PAT: ${{ secrets.GHPAT }}
+          CRANLIKEPWD: ${{ secrets.CRANLIKEPWD }}
