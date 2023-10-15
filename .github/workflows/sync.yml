@@ -4,8 +4,8 @@ on:
       update_all_workflows:
         description: Force updating workflow files
         required: false
-#  schedule:
-#    - cron: '*/60 * * * *'
+  schedule:
+    - cron: '*/60 * * * *'
 
 name: Sync all universes
 
