@@ -16,7 +16,7 @@ name: Mirroring R-forge
 jobs:
   update:
     name: Mirror R-forge
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Find and update R-forge repos
         uses: r-universe-org/rforge-mirror@master

@@ -17,7 +17,7 @@ concurrency:
 jobs:
   update:
     name: Check for new app installations
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Check for new app installations
         uses: r-universe-org/setup-universes@master

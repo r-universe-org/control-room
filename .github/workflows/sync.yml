@@ -12,7 +12,7 @@ name: Sync all universes
 jobs:
   update:
     name: Update submodules
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Sync all universes
         uses: r-universe-org/sync@master
