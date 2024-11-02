@@ -2,13 +2,22 @@
 
 Tools and scheduled actions (cron-jobs) to trigger global/meta operations in the r-universe platform. Each of these can also be triggered manually with a dispatch event.
 
-## Sync universes
+## Global sync
 
 [![sync badge](https://github.com/r-universe-org/control-room/actions/workflows/sync.yml/badge.svg)](https://github.com/r-universe-org/control-room/actions/workflows/sync.yml)
 
 Action source: https://github.com/r-universe-org/sync
 
 Hourly cronjob which checks for all monorepos in [r-universe](https://github.com/r-universe/) if there are any updates in the registry or R packages. If any of the submodules needs to be updated, it triggers a dispatch action in the respective monorepo.
+
+## Sync some universes
+
+ - cran: [![CRAN](https://github.com/r-universe/cran/actions/workflows/sync.yml/badge.svg)](https://github.com/r-universe/cran/actions/workflows/sync.yml)
+ - bioc: [![CRAN](https://github.com/r-universe/bioc/actions/workflows/sync.yml/badge.svg)](https://github.com/r-universe/bioc/actions/workflows/sync.yml)
+ - ropensci: [![CRAN](https://github.com/r-universe/ropensci/actions/workflows/sync.yml/badge.svg)](https://github.com/r-universe/ropensci/actions/workflows/sync.yml)
+
+Action source: https://github.com/r-universe-org/sync
+
 
 ## Rebuilds
 
