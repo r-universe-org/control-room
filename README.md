@@ -1,6 +1,6 @@
 # Control room
 
-Tools and scheduled actions (cron-jobs) to trigger global/meta operations in the r-universe platform. Each of these can also be triggered manually with a dispatch event.
+A central repo with scheduled actions (cron-jobs) to trigger global/meta operations in the r-universe platform. Each of these can also be triggered manually with a dispatch event.
 
 ## Global sync
 
