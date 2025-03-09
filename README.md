@@ -47,7 +47,7 @@ Action source: https://github.com/r-universe-org/cranscraper
 
 Nightly cron to update the automatically generated registry files in [cran-to-git](http://github.com/r-universe-org/cran-to-git). This scrapes all CRAN packages looking for a Git URLs in the package descriptions, and then saves json files grouped by owner.
 
-## R-forge mirror
+## R-forge mirrors
 
 [![rforge badge](https://github.com/r-universe-org/control-room/actions/workflows/rforge.yml/badge.svg)](https://github.com/r-universe-org/control-room/actions/workflows/rforge.yml)
 
