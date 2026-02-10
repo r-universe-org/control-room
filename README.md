@@ -14,6 +14,7 @@ Hourly cronjob which checks for all monorepos in [r-universe](https://github.com
 
  - cran: [![CRAN](https://github.com/r-universe/cran/actions/workflows/sync.yml/badge.svg)](https://github.com/r-universe/cran/actions/workflows/sync.yml)
  - bioc: [![CRAN](https://github.com/r-universe/bioc/actions/workflows/sync.yml/badge.svg)](https://github.com/r-universe/bioc/actions/workflows/sync.yml)
+ - bioc-release: [![CRAN](https://github.com/r-universe/bioc-release/actions/workflows/sync.yml/badge.svg)](https://github.com/r-universe/bioc-release/actions/workflows/sync.yml)
  - ropensci: [![CRAN](https://github.com/r-universe/ropensci/actions/workflows/sync.yml/badge.svg)](https://github.com/r-universe/ropensci/actions/workflows/sync.yml)
 
 Action source: https://github.com/r-universe-org/sync
