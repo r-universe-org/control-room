@@ -56,3 +56,11 @@ Action source: https://github.com/r-universe-org/rforge-mirror
 
 Cron job to update the [r-forge git-to-svn](https://github.com/r-forge) mirrors, runs few times per day.
 
+
+## CRAN/BIOC GitHub mirrors
+
+These are maintained by r-hub / Gabor:
+
+[![Bioc GitHub mirror](https://github.com/r-hub/biocatgh/actions/workflows/biocatgh-update.yml/badge.svg)](https://github.com/r-hub/biocatgh/actions/workflows/biocatgh-update.yml)
+[![CRAN GitHub mirror](https://github.com/r-hub/cranatgh/actions/workflows/cranatgh-update.yml/badge.svg)](https://github.com/r-hub/cranatgh/actions/workflows/cranatgh-update.yml)
+
